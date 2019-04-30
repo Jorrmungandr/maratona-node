@@ -6,7 +6,9 @@ import Banner from './components/banner/banner.jsx';
 import Info from './components/info/info.jsx';
 import Jornada from './components/jornada/jornada.jsx';
 import DepoimentosNotícias from './components/depoimentosnews/depoimentosnews.jsx';
-import Resultados from './components/resultados/resultados.jsx'
+import Resultados from './components/resultados/resultados.jsx';
+import Parceiros from './components/parceiros/parceiros.jsx';
+import Footer from './components/footer/footer.jsx'
 
 class App extends Component {
   render() {
@@ -18,6 +20,8 @@ class App extends Component {
         <Jornada />
         <DepoimentosNotícias />
         <Resultados />
+        <Parceiros />
+        <Footer />
       </div>
     )
   }

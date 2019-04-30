@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './depoimentosnews.scss';
+import crossedSquare from '../../crossedSquare.png';
 
 class DepoimentosNotícias extends Component {
   render() {

@@ -8,8 +8,9 @@ $dinamic-black: #010203;
 }
 
 #journey {
-  h1 {
-    padding: 50px;
+  .text-container {
+    max-width: 90%;
+    margin: auto;
   }
   .navigation-menu {
     display: flex;

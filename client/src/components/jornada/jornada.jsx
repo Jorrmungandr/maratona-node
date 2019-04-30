@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './jornada.scss';
-import crossedsquare from '../../crossedsquare.png';
+import crossedSquare from '../../crossedSquare.png';
 
 class Jornada extends Component {
   render() {
     return (
       <div id="journey">
-        <h1>Nossa Jornada</h1>
+        <div class="text-container">
+          <h1>Nossa Jornada</h1>
+        </div>
         <div class="navigation-menu">
           <div class="arrow left-arrow">volte</div>
           <div class="history-line">
@@ -18,7 +20,7 @@ class Jornada extends Component {
               <p>Resumo dos acontecimentos do ano. Resumo dos acontecimentos do ano. Resumo dos acontecimentos do ano. Resumo dos acontecimentos do ano. Resumo dos acontecimentos do ano. </p>
             </div>
             <div class="image-container">
-              <img src={crossedsquare} alt="IMAGEM" class="image" />
+              <img src={crossedSquare} alt="IMAGEM" class="image" />
             </div>
           </div>
           <div class="arrow right-arrow">passe</div>

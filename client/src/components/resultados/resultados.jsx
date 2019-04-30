@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './resultados.scss';
-import crossedsquare from '../../crossedsquare.png';
+import crossedSquare from '../../crossedSquare.png';
 
 class Resultados extends Component {
   render() {
@@ -13,10 +13,10 @@ class Resultados extends Component {
         <div class="navigation-menu">
           <div class="arrow left-arrow">volte</div>
           <div class="gallery">
-            <img src={crossedsquare} alt="IMAGEM" class="image" />
-            <img src={crossedsquare} alt="IMAGEM" class="image" />
-            <img src={crossedsquare} alt="IMAGEM" class="image" />
-            <img src={crossedsquare} alt="IMAGEM" class="image" />
+            <img src={crossedSquare} alt="IMAGEM" class="image" />
+            <img src={crossedSquare} alt="IMAGEM" class="image" />
+            <img src={crossedSquare} alt="IMAGEM" class="image" />
+            <img src={crossedSquare} alt="IMAGEM" class="image" />
           </div>
           <div class="arrow right-arrow">passe</div>
         </div>
