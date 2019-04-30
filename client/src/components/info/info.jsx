@@ -7,7 +7,7 @@ class Info extends Component {
       <div id="information">
         <div class="text-container">
           <h1>Título das informações sobre a maratona</h1>
-          <p>BREVE INTRODUÇÃO SOBRE A MARATONA Lorem ipsum dolor sit amet et delectus accomodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute cpiosae hendrerit. Eos erant dolorum an. Per facer affert ut.</p>
+          <p>Breve introdução sobre a maratona. Breve introdução sobre a maratona. Breve introdução sobre a maratona. Breve introdução sobre a maratona. Breve introdução sobre a maratona. Breve introdução sobre a maratona. Breve introdução sobre a maratona. </p>
         </div>
         <div class="card-container">
           <div class="card">

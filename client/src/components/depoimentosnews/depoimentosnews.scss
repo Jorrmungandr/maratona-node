@@ -1,0 +1,61 @@
+$navbar-bg: #777;
+$card-bg: #999;
+$dinamic-black: #010203;
+
+@mixin border-radius($radius, $args) {
+  #{$args}-radius: $radius;
+  -webkit-#{$args}-radius: $radius;
+  -moz-#{$args}-radius: $radius;
+  -ms-#{$args}-radius: $radius;
+}
+
+.testimony-news {
+  display: flex;
+  text-align: center;
+  #testimony {
+    flex: 1.5;
+    h1 {
+      padding-bottom: 20px;
+    }
+    .card-container{
+      .card{
+        width: 50%;
+        margin: auto;
+        background-color: $card-bg;
+        @include border-radius(10px, border);
+        border: 1px solid transparent; 
+        padding: 10px;
+        cursor: pointer;
+        &:hover {
+          background-color: $navbar-bg;
+          border: 1px solid $dinamic-black; 
+        }
+      }
+    }
+  }
+  #news {
+    flex: 2;
+    .headline-container {
+      display: flex;
+      min-height: 80%;
+      max-width: 50%;
+      flex-wrap: wrap;
+      margin: auto;
+      .headline {
+        display: flex; 
+        flex-basis: 45%;   
+        justify-content: center;
+        flex-direction: column;
+        background-color: $card-bg;
+        border: 1px solid transparent;
+        @include border-radius(10px, border);
+        margin: 10px;
+        cursor: pointer;
+      }
+      .headline:hover {
+        background-color: $navbar-bg;
+        border: 1px solid $dinamic-black;
+      }
+    }
+  }
+}
