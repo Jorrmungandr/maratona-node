@@ -1,0 +1,64 @@
+$navbar-bg: #777;
+$card-bg: #999;
+$dinamic-black: #010203;
+
+@mixin border-radius($radius, $args) {
+  #{$args}-radius: $radius;
+  -webkit-#{$args}-radius: $radius;
+  -moz-#{$args}-radius: $radius;
+  -ms-#{$args}-radius: $radius;
+}
+
+.footer {
+  margin-top: 70px;
+  // padding-bottom: 70px;
+  background-color: $navbar-bg;
+  display: flex;
+  justify-content: space-around;
+  .study{
+    text-align: center;
+    min-height: 100%;
+    max-width: 100%;
+    .text-container {
+
+    }
+    .study-links {
+      display: flex;
+      flex-wrap: wrap;
+      .link-container {
+        display: flex; 
+        flex-basis: 40%;   
+        justify-content: center;
+        flex-direction: column;
+        background-color: $card-bg;
+        border: 1px solid transparent;
+        @include border-radius(10px, border);
+        margin: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+  .contact {
+    display: flex;
+    align-items: center;
+    .text-container {
+      padding: 20px;
+    }
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      .link-container {
+        display: flex; 
+        flex-basis: 80%;   
+        justify-content: center;
+        flex-direction: column;
+        background-color: $card-bg;
+        border: 1px solid transparent;
+        @include border-radius(10px, border);
+        margin: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
