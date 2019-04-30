@@ -49,15 +49,41 @@ class Informações extends Component {
             <a>clique</a>
           </div>
           <div class="card">
-            <h2>Organização</h2>
+            <h2>Metodologia</h2>
             <p>PEQUENO TEXTO QUE LEVE O USUÁRIO A EXPANDIR O BLOCO (terá um texto maior explicando essa área)</p>
             <a>clique</a>
           </div>
           <div class="card">
-            <h2>Organização</h2>
+            <h2>Objetivos</h2>
             <p>PEQUENO TEXTO QUE LEVE O USUÁRIO A EXPANDIR O BLOCO (terá um texto maior explicando essa área)</p>
             <a>clique</a>
           </div>
+        </div>
+      </div>
+    )
+  }
+}
+
+class Jornada extends Component {
+  render() {
+    return (
+      <div id="journey">
+        <h1>Nossa Jornada</h1>
+        <div class="navigation-menu">
+          <div class="arrow left-arrow">volte</div>
+          <div class="history-line">
+            <div class="text-container">
+              <div class="title-wrapper">
+                <h1>Ano</h1>
+                <h3>Título do ano</h3>
+              </div>
+              <p>RESUMO DOS ACONTECIMENTOS DO ANO Lorem ipsum dolor sit amet et delectus accomodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit disse</p>
+            </div>
+            <div class="image-container">
+              <img src="#" alt="IMAGEM" id="image" />
+            </div>
+          </div>
+          <div class="arrow right-arrow">passe</div>
         </div>
       </div>
     )
@@ -75,6 +101,7 @@ class Page extends Component {
         <Navbar />
         <Banner />
         <Informações />
+        <Jornada />
       </div>
     )
   }

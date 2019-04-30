@@ -17,8 +17,10 @@ $dinamic-black: #010203;
 }
 
 @mixin test-subject {
-  width: 100px !important;
-  max-height: 100px !important;
+  max-width: 50px !important;
+  min-width: 50px !important;
+  max-height: 50px !important;
+  min-height: 50px !important;
   background-color: red !important;
 }
 
@@ -96,6 +98,48 @@ $dinamic-black: #010203;
         margin: auto;
         position: relative;
         padding-bottom: 20px;
+      }
+    }
+  }
+}
+
+#journey {
+  height: 700px;
+  h1 {
+    padding: 50px;
+  }
+  .navigation-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .arrow {
+      cursor: pointer; 
+      height: 20px;
+      border: 1px solid $dinamic-black;
+      text-align: center;
+    }
+    .history-line {
+      display: flex;
+      width: 40%;
+      border: 1px solid $dinamic-black;
+      @include border-radius(10px, border);
+      justify-content: space-around;
+      .text-container {
+        width: 40%;
+        .title-wrapper {
+          display: flex;
+          text-align: center;
+          align-items: center;
+        }
+        p {
+          width: 70%;
+        }
+      }
+      .image-container {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
