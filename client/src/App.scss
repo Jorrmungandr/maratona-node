@@ -16,53 +16,6 @@ $dinamic-black: #010203;
   @include border-radius($bottom-right, border-bottom-right);
 }
 
-@mixin test-subject {
-  max-width: 50px !important;
-  min-width: 50px !important;
-  max-height: 50px !important;
-  min-height: 50px !important;
-  background-color: red !important;
-}
-
-.navbar {
-  overflow: hidden;
-  background-color: $navbar-bg;
-  a {
-    display: block;
-    color: $dinamic-black;
-    text-align: center;
-    padding: 10px 40px;
-    float: right;
-    font-size: 20px;
-  }
-  a:hover {
-    background-color: #444;
-  }
-}
-
-#banner {
-  display: flex;
-  margin: 0px;
-  background-color: $navbar-bg;
-  .text-container {
-    position: relative;
-    flex: 1;
-    margin-left: 4%;
-  }
-  .image-container {
-    display: flex;
-    position: relative;
-    flex: 2;
-    justify-content: center;
-    align-items: center;
-    #image {}
-  }
-  p {
-    width: 60%;
-    padding-bottom: 100px;
-  }
-}
-
 #information {
   border-top: 3px solid $dinamic-black;
   .text-container {
@@ -143,6 +96,7 @@ $dinamic-black: #010203;
     }
   }
 }
+
 .testimony-news {
   display: flex;
   text-align: center;
@@ -167,10 +121,10 @@ $dinamic-black: #010203;
   #news {
     flex: 2;
     .headline-container {
-      min-height: 100%;
       display: flex;
+      min-height: 80%;
+      max-width: 50%;
       flex-wrap: wrap;
-      max-width: 60%;
       margin: auto;
       .headline {
         display: flex; 
@@ -188,6 +142,37 @@ $dinamic-black: #010203;
       .headline:hover {
         background-color: $navbar-bg;
         border: 1px solid $dinamic-black;
+      }
+    }
+  }
+}
+
+.results {
+  height: 900px;
+  .text-container {
+    max-width: 80%;
+    margin: auto;
+    h3 {
+      max-width: 60%;
+    }
+  }
+  .navigation-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .arrow {
+      cursor: pointer; 
+      height: 20px;
+      border: 1px solid $dinamic-black;
+      text-align: center;
+    }
+    .gallery {
+      max-width: 70%;
+      display: flex; 
+      img {
+        margin: 10px;
+        border: 1px solid $dinamic-black;
+        @include border-radius(10px, margin);
       }
     }
   }

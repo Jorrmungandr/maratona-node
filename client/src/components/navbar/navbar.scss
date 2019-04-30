@@ -1,0 +1,19 @@
+$navbar-bg: #777;
+$dinamic-black: #010203;
+$navbar-hover-bg: #444;
+
+.navbar {
+  overflow: hidden;
+  background-color: $navbar-bg;
+  a {
+    display: block;
+    color: $dinamic-black;
+    text-align: center;
+    padding: 10px 40px;
+    float: right;
+    font-size: 20px;
+  }
+  a:hover {
+    background-color: $navbar-hover-bg;
+  }
+}

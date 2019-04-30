@@ -1,0 +1,24 @@
+$navbar-bg: #777;
+
+#banner {
+  display: flex;
+  margin: 0px;
+  background-color: $navbar-bg;
+  .text-container {
+    position: relative;
+    flex: 1;
+    margin-left: 4%;
+  }
+  .image-container {
+    display: flex;
+    position: relative;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+    #image {}
+  }
+  p {
+    width: 60%;
+    padding-bottom: 100px;
+  }
+}

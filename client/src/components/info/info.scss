@@ -1,0 +1,49 @@
+$card-bg: #999;
+$dinamic-black: #010203;
+
+@mixin border-radius($radius, $args) {
+  #{$args}-radius: $radius;
+  -webkit-#{$args}-radius: $radius;
+  -moz-#{$args}-radius: $radius;
+  -ms-#{$args}-radius: $radius;
+}
+
+#information {
+  border-top: 3px solid $dinamic-black;
+  .text-container {
+    h1 {
+      padding-top: 20px;
+    }
+    * {
+      margin: auto;
+      width: 30%;
+      padding-bottom: 20px;
+    }
+  }
+  .card-container {
+    display: flex; 
+    justify-content: space-around;
+    .card{
+      max-width: 15%;
+      background-color: $card-bg;
+      border: 2px solid $dinamic-black;
+      @include border-radius(10px, border);
+      text-align: center;
+      h2 {
+        padding-top: 20px;
+        font-size: 30px;
+      }
+      p{
+        width: 50%;
+      }
+      a {
+        cursor: pointer;
+      }
+      * {
+        margin: auto;
+        position: relative;
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
