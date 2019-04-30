@@ -1,4 +1,4 @@
-$navbar-bg: #666;
+$navbar-bg: #888;
 $dinamic-black: #010203;
 
 @mixin border-radius($radius, $args) {
@@ -6,6 +6,19 @@ $dinamic-black: #010203;
   -webkit-#{$args}-radius: $radius;
   -moz-#{$args}-radius: $radius;
   -ms-#{$args}-radius: $radius;
+}
+
+@mixin directional-border-radius ($top-left, $bottom-left, $top-right, $bottom-right){
+  @include border-radius($top-left, border-top-left);
+  @include border-radius($bottom-left, border-bottom-left);
+  @include border-radius($top-right, border-top-right);
+  @include border-radius($bottom-right, border-bottom-right);
+}
+
+@mixin test-subject {
+  width: 100px !important;
+  max-height: 100px !important;
+  background-color: red !important;
 }
 
 .navbar {
@@ -21,5 +34,31 @@ $dinamic-black: #010203;
   }
   a:hover {
     background-color: #444;
+  }
+}
+
+#banner {
+  display: flex;
+  margin: 0px;
+  background-color: $navbar-bg;
+  .text-container {
+    position: relative;
+    flex: 1;
+    margin-left: 4%;
+  }
+  .image-container {
+    display: flex;
+    position: relative;
+    flex: 2;
+    // @include test-subject();
+    justify-content: center;
+    align-items: center;
+  }
+  #image {
+    
+  }
+  p {
+    width: 60%;
+    padding-bottom: 100px;
   }
 }
