@@ -1,0 +1,25 @@
+$navbar-bg: #666;
+$dinamic-black: #010203;
+
+@mixin border-radius($radius, $args) {
+  #{$args}-radius: $radius;
+  -webkit-#{$args}-radius: $radius;
+  -moz-#{$args}-radius: $radius;
+  -ms-#{$args}-radius: $radius;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: $navbar-bg;
+  a {
+    display: block;
+    color: $dinamic-black;
+    text-align: center;
+    padding: 10px 40px;
+    float: right;
+    font-size: 20px;
+  }
+  a:hover {
+    background-color: #444;
+  }
+}
