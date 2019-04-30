@@ -104,7 +104,6 @@ $dinamic-black: #010203;
 }
 
 #journey {
-  height: 700px;
   h1 {
     padding: 50px;
   }
@@ -140,6 +139,55 @@ $dinamic-black: #010203;
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+    }
+  }
+}
+.testimony-news {
+  display: flex;
+  text-align: center;
+  #testimony {
+    flex: 1.5;
+    h1 {
+      padding-bottom: 20px;
+    }
+    .card-container{
+      .card{
+        width: 50%;
+        margin: auto;
+        background-color: $card-bg;
+        @include border-radius(10px, border);
+        padding: 10px;
+        a {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  #news {
+    flex: 2;
+    .headline-container {
+      min-height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 60%;
+      margin: auto;
+      .headline {
+        display: flex; 
+        flex-basis: 45%;   
+        justify-content: center;
+        flex-direction: column;
+        background-color: $card-bg;
+        border: 1px solid transparent;
+        @include border-radius(10px, border);
+        margin: 10px;
+        a {
+          cursor: pointer;
+        }
+      }
+      .headline:hover {
+        background-color: $navbar-bg;
+        border: 1px solid $dinamic-black;
       }
     }
   }
