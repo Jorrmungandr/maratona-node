@@ -15,27 +15,16 @@ $dinamic-black: #010203;
       max-width: 60%;
     }
   }
-  .navigation-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .arrow {
-      cursor: pointer; 
-      height: 20px;
-      border: 1px solid $dinamic-black;
-      text-align: center;
-    }
-    .gallery {
-      max-width: 70%;
-      display: flex; 
-      .image {
-        max-width: 150px;
-        max-height: 200px;
-        margin: 10px;
-        border: 1px solid $dinamic-black;
-        @include border-radius(10px, margin);
-        cursor: pointer;
-      }
-    }
+  .image {
+    max-width: 150px;
+    height: 200px;
+    margin: auto;
+    border: 1px solid $dinamic-black;
+    @include border-radius(10px, margin);
+    cursor: pointer;
+  }
+  #slider {
+    width: 30%;
+    margin: auto;
   }
 }
