@@ -13,7 +13,7 @@ export default class Navbar extends Component {
     const getHeight = (element) => document.querySelector(element).clientHeight;
 
     let heights = {
-      navbar: getHeight('.navbar') + 10,
+      navbar: getHeight('.navbar') + 20,
       banner: getHeight('#banner'),
       information: getHeight('#information') + 40,
       journey: getHeight('#journey'),
@@ -38,8 +38,6 @@ export default class Navbar extends Component {
       } else height += each[1];
     });
 
-    // console.log(this.state.elementHeights);
-    // console.log(heightSum);
     window.scrollTo(0, heightSum);
   }
 
