@@ -1,0 +1,18 @@
+$navbar-bg: #777;
+$card-bg: #999;
+$dinamic-black: #010203;
+$navbar-hover-bg: #444;
+
+@mixin border-radius($radius, $args) {
+  #{$args}-radius: $radius;
+  -webkit-#{$args}-radius: $radius;
+  -moz-#{$args}-radius: $radius;
+  -ms-#{$args}-radius: $radius;
+}
+
+@mixin directional-border-radius ($top-left, $bottom-left, $top-right, $bottom-right){
+  @include border-radius($top-left, border-top-left);
+  @include border-radius($bottom-left, border-bottom-left);
+  @include border-radius($top-right, border-top-right);
+  @include border-radius($bottom-right, border-bottom-right);
+}

@@ -1,12 +1,4 @@
-$card-bg: #999;
-$dinamic-black: #010203;
-
-@mixin border-radius($radius, $args) {
-  #{$args}-radius: $radius;
-  -webkit-#{$args}-radius: $radius;
-  -moz-#{$args}-radius: $radius;
-  -ms-#{$args}-radius: $radius;
-}
+@import '../refs/refs.scss';
 
 #information {
   border-top: 3px solid $dinamic-black;

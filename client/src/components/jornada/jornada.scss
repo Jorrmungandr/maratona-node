@@ -1,51 +1,31 @@
-$dinamic-black: #010203;
-
-@mixin border-radius($radius, $args) {
-  #{$args}-radius: $radius;
-  -webkit-#{$args}-radius: $radius;
-  -moz-#{$args}-radius: $radius;
-  -ms-#{$args}-radius: $radius;
-}
+@import '../refs/refs.scss';
 
 #journey {
-  .text-container {
-    max-width: 90%;
+  .card {
     margin: auto;
-  }
-  .navigation-menu {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    .arrow {
-      cursor: pointer; 
-      height: 20px;
-      border: 1px solid $dinamic-black;
-      text-align: center;
-    }
-    .history-line {
-      display: flex;
+    width: 40%;
+    border: 1px solid $dinamic-black;
+    @include border-radius(10px, border);
+    justify-content: space-around;
+    .text-container {
       width: 40%;
-      border: 1px solid $dinamic-black;
-      @include border-radius(10px, border);
-      justify-content: space-around;
-      .text-container {
-        width: 40%;
-        .title-wrapper {
-          display: flex;
-          text-align: center;
-          align-items: center;
-        }
-      }
-      .image-container {
-        width: 40%;
-        display: flex;
-        justify-content: center;
+      .title-wrapper {
+      display: flex;
+      text-align: center;
         align-items: center;
-        .image {
-          max-width: 200px;
-          max-height: 200px;
-        }
+      }
+    }
+    .image-container {
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .image {
+        max-width: 200px;
+        max-height: 200px;
       }
     }
   }
 }
+

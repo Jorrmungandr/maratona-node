@@ -1,13 +1,4 @@
-$navbar-bg: #777;
-$card-bg: #999;
-$dinamic-black: #010203;
-
-@mixin border-radius($radius, $args) {
-  #{$args}-radius: $radius;
-  -webkit-#{$args}-radius: $radius;
-  -moz-#{$args}-radius: $radius;
-  -ms-#{$args}-radius: $radius;
-}
+@import '../refs/refs.scss';
 
 .testimony-news {
   display: flex;
@@ -49,7 +40,7 @@ $dinamic-black: #010203;
         background-color: $card-bg;
         border: 1px solid transparent;
         @include border-radius(10px, border);
-        margin: 10px;
+        margin: 8px;
         cursor: pointer;
       }
       .headline:hover {

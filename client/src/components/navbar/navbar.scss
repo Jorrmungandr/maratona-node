@@ -1,17 +1,16 @@
-$navbar-bg: #777;
-$dinamic-black: #010203;
-$navbar-hover-bg: #444;
+@import '../refs/refs.scss';
 
 .navbar {
   overflow: hidden;
   background-color: $navbar-bg;
+  display: flex;
+  justify-content: flex-end; 
   a {
-    display: block;
     color: $dinamic-black;
     text-align: center;
-    padding: 10px 40px;
-    float: right;
+    padding: 10px 30px;
     font-size: 20px;
+    cursor: pointer;
   }
   a:hover {
     background-color: $navbar-hover-bg;

@@ -2,11 +2,13 @@
   "name": "maratona-node",
   "version": "0.1.0",
   "private": true,
+  "author": "Jorrmungandr",
   "dependencies": {
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0"
+    "react-scripts": "3.0.0",
+    "react-slick": "^0.24.0"
   },
   "scripts": {
     "start": "react-scripts start",

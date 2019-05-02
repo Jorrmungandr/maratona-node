@@ -5,12 +5,12 @@ class Navbar extends Component {
   render() {
     return (
       <div class="navbar">
-        <a>Parceiros</a>
-        <a>Resultados</a>
-        <a>Notícias</a>
-        <a>Depoimentos</a>
-        <a>Jornada</a>
         <a>O que somos?</a>
+        <a>Jornada</a>
+        <a>Depoimentos</a>
+        <a>Notícias</a>
+        <a>Resultados</a>
+        <a>Parceiros</a>
       </div>
     )
   }
