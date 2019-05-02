@@ -3,12 +3,12 @@ import './resultados.scss';
 import crossedSquare from '../../crossedSquare.png';
 import Slider from 'react-slick';
 
-class Resultados extends Component {
+export default class Resultados extends Component {
   render() {
     const settings = {
       dots: true,
       infinite: true,
-      speed: 800,
+      speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
     };
@@ -31,18 +31,7 @@ class Resultados extends Component {
             </div>
           </Slider>
         </div>
-        {/* <div class="navigation-menu">
-          <div class="arrow left-arrow">volte</div>
-          <div class="gallery">
-            <img src={crossedSquare} alt="IMAGEM" class="image" />
-            <img src={crossedSquare} alt="IMAGEM" class="image" />
-            <img src={crossedSquare} alt="IMAGEM" class="image" />
-          </div>
-          <div class="arrow right-arrow">passe</div>
-        </div> */}
       </div>
     )
   }
 }
-
-export default Resultados;

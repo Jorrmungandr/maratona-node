@@ -24,7 +24,7 @@ class Card extends Component {
   }
 }
 
-class Jornada extends Component {
+export default class Jornada extends Component {
   render() {
     const settings = {
       dots: true,
@@ -47,5 +47,3 @@ class Jornada extends Component {
     )
   }
 }
-
-export default Jornada;

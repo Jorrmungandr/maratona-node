@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './info.scss'
 
-class Info extends Component {
+export default class Info extends Component {
   render() {
     return (
       <div id="information">
@@ -30,5 +30,3 @@ class Info extends Component {
     )
   }
 }
-
-export default Info;

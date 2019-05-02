@@ -16,3 +16,7 @@ $navbar-hover-bg: #444;
   @include border-radius($top-right, border-top-right);
   @include border-radius($bottom-right, border-bottom-right);
 }
+
+html {
+  scroll-behavior: smooth;
+}

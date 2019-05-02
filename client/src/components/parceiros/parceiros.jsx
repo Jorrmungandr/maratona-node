@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './parceiros.scss';
 import crossedSquare from '../../crossedSquare.png';
 
-class Parceiros extends Component {
+export default class Parceiros extends Component {
   render() {
     return (
       <div id="partners">
@@ -20,5 +20,3 @@ class Parceiros extends Component {
     )
   }
 }
-
-export default Parceiros;

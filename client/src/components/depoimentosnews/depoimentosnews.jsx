@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import './depoimentosnews.scss';
 import crossedSquare from '../../crossedSquare.png';
 
-class DepoimentosNotícias extends Component {
+export default class DepoimentosNotícias extends Component {
   render() {
     return (
-      <div class="testimony-news">
-        <div id="testimony">
+      <div class="testimonials-news">
+        <div id="testimonials">
           <h1>Depoimentos</h1>
           <div class="card-container">
             <div class="card">
@@ -44,5 +44,3 @@ class DepoimentosNotícias extends Component {
     )
   }
 }
-
-export default DepoimentosNotícias;

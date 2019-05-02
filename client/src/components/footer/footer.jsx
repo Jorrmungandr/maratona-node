@@ -16,7 +16,7 @@ class Link extends Component {
   }
 }
 
-class Footer extends Component {
+export default class Footer extends Component {
   render() {
     return (
       <div class="footer">
@@ -45,5 +45,3 @@ class Footer extends Component {
     )
   }
 }
-
-export default Footer;
