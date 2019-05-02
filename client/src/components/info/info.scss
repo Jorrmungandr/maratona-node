@@ -16,11 +16,14 @@
     display: flex; 
     justify-content: space-around;
     .card{
-      max-width: 15%;
+      width: 15%;
       background-color: $card-bg;
       border: 2px solid $dinamic-black;
       @include border-radius(10px, border);
       text-align: center;
+      cursor: pointer;
+      margin-left: 8%;
+      margin-right: 8%;
       h2 {
         padding-top: 20px;
         font-size: 2vw;

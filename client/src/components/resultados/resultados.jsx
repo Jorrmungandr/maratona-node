@@ -8,6 +8,8 @@ export default class Resultados extends Component {
     const settings = {
       dots: true,
       infinite: true,
+      accessibility: false,
+      focusOnSelect: false,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -15,7 +17,7 @@ export default class Resultados extends Component {
     return (
       <div class="results">
         <div class="text-container">
-          <h1>Resultados</h1>
+          <h1>Sucessos</h1>
           <h3>TEXTO LEGITIMANDO OS RESULTADOS DA MARATONA E INTRODUZINDO O SUCESSO DOS EX PARTICIPANTES</h3>
         </div>
         <div id="slider">

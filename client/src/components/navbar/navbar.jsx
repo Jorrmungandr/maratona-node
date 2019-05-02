@@ -33,9 +33,7 @@ export default class Navbar extends Component {
     let heightSum = 0;
 
     Object.entries(this.state.elementHeights).map((each) => {
-      if (each[0] === eventClass) {
-        heightSum = height;
-      } else height += each[1];
+      each[0] === eventClass ? heightSum = height : height += each[1];
     });
 
     window.scrollTo(0, heightSum);

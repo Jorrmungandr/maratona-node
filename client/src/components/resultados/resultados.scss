@@ -17,7 +17,7 @@ $dinamic-black: #010203;
   }
   .image {
     max-width: 150px;
-    height: 200px;
+    min-height: 200px;
     margin: auto;
     border: 1px solid $dinamic-black;
     @include border-radius(10px, margin);

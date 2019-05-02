@@ -29,7 +29,7 @@ export default class Jornada extends Component {
     const settings = {
       dots: true,
       infinite: true,
-      speed: 800,
+      speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1
     };
