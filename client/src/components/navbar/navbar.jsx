@@ -14,7 +14,7 @@ export default class Navbar extends Component {
 
     let heights = {
       navbar: getHeight('.navbar') + 20,
-      // banner: getHeight('#banner'),
+      banner: getHeight('#banner'),
       information: getHeight('#information') + 40,
       journey: getHeight('#journey'),
       testimonials: getHeight('.testimonials-news'),
