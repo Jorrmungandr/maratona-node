@@ -1,24 +1,20 @@
 import React, { Component } from 'react';
 import './navbar.scss';
-import Strapi from 'strapi-sdk-javascript/build/main';
-
-const strapi = new Strapi('http://localhost:1337');
 
 export default class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
       elementHeights: {},
-      posts: [],
     }
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     const getHeight = (element) => document.querySelector(element).clientHeight;
 
     let heights = {
-      // navbar: getHeight('.navbar') + 20,
-      banner: getHeight('#banner'),
+      navbar: getHeight('.navbar') + 20,
+      // banner: getHeight('#banner'),
       information: getHeight('#information') + 40,
       journey: getHeight('#journey'),
       testimonials: getHeight('.testimonials-news'),
@@ -30,15 +26,6 @@ export default class Navbar extends Component {
       elementHeights: heights,
     })
 
-    //strapi
-
-    try {
-      const posts = await strapi.getEntries('navbars')
-      this.setState({ posts });
-    }
-    catch (err) {
-      alert(err);
-    }
   }
 
   handleClick(event) {
@@ -55,19 +42,13 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <section>
-      {this.state.posts.map((post) => {
-        return(
-          <div class="navbar" onClick={this.handleClick.bind(this)}>
-            <a class="information">{post.Informação}</a>
-            <a class="testimonials">{post.Depoimentos}</a>
-            <a class="testimonials">{post.Notícias}</a>
-            <a class="sucess">{post.Sucesso}</a>
-            <a class="partners">{post.Parceiros}</a>
-          </div>
-        )
-      })}
-    </section>
+      <div class="navbar" onClick={this.handleClick.bind(this)}>
+        <a class="information">{this.props.info}</a>
+        <a class="testimonials">{this.props.testimonial}</a>
+        <a class="testimonials">{this.props.news}</a>
+        <a class="sucess">{this.props.sucess}</a>
+        <a class="partners">{this.props.partners}</a>
+      </div>
     )
   }
 } 
