@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "navbars",
+  "info": {
+    "name": "navbar",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "Informação": {
+      "type": "string"
+    },
+    "Depoimentos": {
+      "type": "string"
+    },
+    "Notícias": {
+      "type": "string"
+    },
+    "Sucesso": {
+      "type": "string"
+    },
+    "Parceiros": {
+      "type": "string"
+    }
+  }
+}

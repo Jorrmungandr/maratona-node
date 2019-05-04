@@ -1,14 +1,16 @@
-const express = require('express');
-const app = express();
-const path = require('path');
-const bodyParser = require('body-parser');
+#!/usr/bin/env node
+'use strict';
 
-app.use('/static', express.static(path.join(__dirname, '../client/build/static')));
+/**
+ * Use `server.js` to run your application without `$ strapi start`.
+ * To start the server, run: `$ npm start`.
+ *
+ * This is handy in situations where the Strapi CLI is not relevant or useful.
+ */
 
-app.use(bodyParser.json());
+process.chdir(__dirname);
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'))
-});
-
-app.listen(3000);
+(() => {
+  const strapi = require('strapi');
+  strapi.start();
+})();

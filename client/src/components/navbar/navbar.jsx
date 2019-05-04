@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
 import './navbar.scss';
+import Strapi from 'strapi-sdk-javascript/build/main';
+
+const strapi = new Strapi('http://localhost:1337');
 
 export default class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
       elementHeights: {},
+      posts: [],
     }
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     const getHeight = (element) => document.querySelector(element).clientHeight;
 
     let heights = {
-      navbar: getHeight('.navbar') + 20,
+      // navbar: getHeight('.navbar') + 20,
       banner: getHeight('#banner'),
       information: getHeight('#information') + 40,
       journey: getHeight('#journey'),
@@ -25,6 +29,16 @@ export default class Navbar extends Component {
     this.setState({
       elementHeights: heights,
     })
+
+    //strapi
+
+    try {
+      const posts = await strapi.getEntries('navbars')
+      this.setState({ posts });
+    }
+    catch (err) {
+      alert(err);
+    }
   }
 
   handleClick(event) {
@@ -41,13 +55,19 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <div class="navbar" onClick={this.handleClick.bind(this)}>
-        <a class="information">O que somos?</a>
-        <a class="testimonials">Depoimentos</a>
-        <a class="testimonials">Notícias</a>
-        <a class="sucess">Sucesso</a>
-        <a class="partners">Parceiros</a>
-      </div>
+      <section>
+      {this.state.posts.map((post) => {
+        return(
+          <div class="navbar" onClick={this.handleClick.bind(this)}>
+            <a class="information">{post.Informação}</a>
+            <a class="testimonials">{post.Depoimentos}</a>
+            <a class="testimonials">{post.Notícias}</a>
+            <a class="sucess">{post.Sucesso}</a>
+            <a class="partners">{post.Parceiros}</a>
+          </div>
+        )
+      })}
+    </section>
     )
   }
 } 

@@ -1,15 +1,51 @@
 {
-  "name": "maratona-server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "name": "server",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application.",
+  "main": "./server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "setup": "cd admin && npm run setup",
+    "start": "node server.js",
+    "strapi": "node_modules/strapi/bin/strapi.js",
+    "lint": "node_modules/.bin/eslint api/**/*.js config/**/*.js plugins/**/*.js",
+    "postinstall": "node node_modules/strapi/lib/utils/post-install.js"
   },
-  "author": "Jorrmungandr",
-  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-react": "^7.7.0"
+  },
   "dependencies": {
-    "express": "^4.16.4"
-  }
+    "lodash": "^4.17.5",
+    "strapi": "3.0.0-alpha.26.1",
+    "strapi-utils": "3.0.0-alpha.26.1",
+    "strapi-hook-bookshelf": "3.0.0-alpha.26.1",
+    "strapi-hook-knex": "3.0.0-alpha.26.1",
+    "knex": "latest",
+    "sqlite3": "latest"
+  },
+  "author": {
+    "name": "edgar",
+    "email": "",
+    "url": ""
+  },
+  "maintainers": [
+    {
+      "name": "edgar",
+      "email": "",
+      "url": ""
+    }
+  ],
+  "strapi": {
+    "packageManager": "npm",
+    "uuid": "7d8deecc-1cb2-4c89-8ee7-2b50daa908d9"
+  },
+  "engines": {
+    "node": ">= 10.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "license": "MIT"
 }
